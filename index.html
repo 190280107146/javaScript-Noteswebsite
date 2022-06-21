@@ -8,6 +8,19 @@
     <title>Notes App</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <style>
+            .card{
+                color: white;
+                background-color: black;
+            }
+            .card-body{
+                border: 1px solid white;
+            }
+            body{
+                color: white;
+                background-color: rgb(28, 27, 27);
+            }
+        </style>
 </head>
 
 <body>
@@ -25,7 +38,7 @@
             <form class="form-inline my-2 my-lg-0">
                 <input class="form-control mr-sm-2" id="searchTxt" type="search" placeholder="Search"
                     aria-label="Search">
-                <a href="#" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</a>
+                <a href="#" class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</a>
             </form>
         </div>
     </nav>
@@ -51,7 +64,7 @@
         <div id="notes" class="row container-fluid">
             <div class="noteCard my-2 mx-2 card" style="width: 18rem;">
                 <div class="card-body">
-                    <h1 class="card-title">Note</h1>
+                    <h1 class="card-title"></h1>
                     <p class="card-text"></p>
                     <a href="#" class="btn btnprimary">Delete Note</a>
                 </div>
@@ -67,7 +80,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-    <script src="/javaScript-Noteswebsite/notesApp.js"></script>
+    <script src="notesApp.js"></script>
 </body>
 
 </html>
