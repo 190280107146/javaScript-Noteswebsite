@@ -31,9 +31,9 @@ function showNotes() {
   let html = "";
   notesObj.forEach(function (element, index) {
     html += `
-            <div class="noteCard my-2 mx-2 card" style="width: 18rem;">
+            <div class="noteCard my-2 mx-4 card" style="width: 18rem;">
                     <div class="card-body">
-                        <h2 class="card-title">${element.title}</h2>
+                        <h1 class="card-title">${element.title}</h1>
                         <p class="card-text"> ${element.text}</p>
                         <button id="${index}"onclick="deleteNote(this.id)" class="btn btn-primary">Delete Note</button>
                     </div>
@@ -58,6 +58,8 @@ function deleteNote(index) {
   localStorage.setItem("notes", JSON.stringify(notesObj));
   showNotes();
 }
+
+// Searching the notes
 let search = document.getElementById('searchTxt');
 search.addEventListener("input", function () {
 
@@ -65,7 +67,9 @@ search.addEventListener("input", function () {
   let noteCards = document.getElementsByClassName('noteCard');
   Array.from(noteCards).forEach(function (element) {
     let cardTxt = element.getElementsByTagName("p")[0].innerText;
-    if (cardTxt.includes(inputVal)) {
+
+    let cardTitle = element.getElementsByTagName("h1")[0].innerText;
+    if (cardTxt.includes(inputVal) || cardTitle.includes(inputVal)) {
       element.style.display = "block";
     }
     else {
@@ -73,4 +77,5 @@ search.addEventListener("input", function () {
     }
   })
 })
+
 
